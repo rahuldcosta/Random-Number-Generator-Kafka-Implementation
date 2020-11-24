@@ -1,0 +1,36 @@
+{
+	"id": "83663c0e-f36d-e3f0-383c-8ff17646892c",
+	"name": "KristalAI-Random-Numbers",
+	"description": "",
+	"order": [
+		"d5323fef-e0f4-1a9f-54b2-519e66550002"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1594365053787,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "d5323fef-e0f4-1a9f-54b2-519e66550002",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:9000/number/showResults",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1594365033301,
+			"name": "GetRandomNumberResults",
+			"description": "",
+			"collectionId": "83663c0e-f36d-e3f0-383c-8ff17646892c",
+			"responses": []
+		}
+	]
+}

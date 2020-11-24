@@ -1,0 +1,42 @@
+Pre-Requisite
+1.Java 1.8 needs to be installed
+2.JAVA_HOME needs to be set in enviroment variables.
+3.unzip the submission in C Drive.
+4. Navigate to C:\Tools
+
+
+Instructions
+1.Navigate to kafka_2.12-2.5.0 folder
+2.create a Data folder for zookeeper(Already Created in sumbission) 
+3.set dataDir to data folder path create above  current value is (dataDir=/c/Tools/kafka_2.12-2.5.0/zookeeper-data) in .\config\zookeeper.properties
+4.Setup logs folder(Already Created in sumbission) and change value of log.dirs=/c/Tools/kafka_2.12-2.5.0/logs in .\config\server.properties
+5.Setup Listeners using listeners=PLAINTEXT://:9092 in .\config\zookeeper.properties
+
+6.Open CMD or PowerShell In Windows	and navigate to path where kafka application is installed.
+	open 3 different CMD/PowerShell windows for each of the below commands
+	#start zookeeper
+	.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+	#start Kafka
+	.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+	#create Topic in Kafka
+	.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic kristalai
+
+Note:- Please start the consumer First and then Producer	
+To start Consumer
+1.navigate to C:\Tools\random-number-service\target
+2.Type command java -jar .\random-number-service-0.0.1-SNAPSHOT.jar
+	
+To start Producer
+1. navigate to C:\Tools\random-number-generator\target
+2. Type command java -jar .\random-number-generator-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+
+zookeeper :- localhost:2181
+kafka :- localhost:9092
+consumer API :- localhost:9000
+GetAPI Route :- http://localhost:9000/number/showResults
+
+
+
